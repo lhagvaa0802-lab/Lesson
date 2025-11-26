@@ -114,7 +114,7 @@
 
 // let arr = "Hello";
 
-// let reservedString = " ";
+// let reservedString = "";
 
 // for (let i = arr.length - 1; i >= 0; i--) {
 //   const char = arr[i];
@@ -124,18 +124,18 @@
 
 // console.log(reservedString);
 
-function myMax(arr) {
-  let maxNumber = arr[0];
-  for (i = 1; i < arr.length; i++) {
-    if (maxNumber < arr[i]) {
-      maxNumber = arr[i];
-    }
-  }
-  return maxNumber;
-}
+// function myMax(arr) {
+//   let maxNumber = arr[0];
+//   for (i = 1; i < arr.length; i++) {
+//     if (maxNumber < arr[i]) {
+//       maxNumber = arr[i];
+//     }
+//   }
+//   return maxNumber;
+// }
 
-let number = [44, 7, 3, 4, 10, 12];
-console.log(myMax(number));
+// let number = [44, 7, 3, 4, 10, 12];
+// console.log(myMax(number));
 
 // function myfunction(str) {
 //   let char = "";
@@ -149,3 +149,108 @@ console.log(myMax(number));
 // }
 // let myWord = "rdsd";
 // console.log(myfunction(myWord));
+
+// let n=5
+// let fac = 1;
+// for(let i=1; i<=n; i++) {
+  
+//   fac=fac*i
+// }
+
+// console.log(fac)
+
+
+// function myFac(fac){
+//   let = totalFac=1
+//   for(let i=1; i<=fac; i++) {
+  
+//   totalFac = totalFac * i;
+// }
+//   return totalFac
+// }
+
+// console.log(myFac(6))
+
+
+
+// function isPalindrome(myWord){
+// myWord=myWord.toLocaleLowerCase()
+
+// let rightLetter=myWord.length-1
+// for(i=0; i<myWord.length; i++){
+//   if (myWord[i] !== myWord[rightLetter-i]){
+//     return false
+// }
+// }
+// return true
+// }
+
+// console.log(isPalindrome("Hadgalagdah"))
+
+
+
+
+// function lastItem(myArray){
+// let newArray = myArray[myArray.length - 1];
+// return newArray
+// }
+// const realArray = ["banana", "apple", "kiwi", "dorj"];
+// console.log(lastItem(realArray));
+
+
+
+
+// function freqCounter(realArray,item){
+//   let count = 0;
+//   for (i = 0; i < realArray.length - 1; i++) {
+//     if (realArray[i] === item) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// const realArray = ["banana", "banana", "banana", "dorj"];
+// const item = "banana";
+
+// console.log(freqCounter(realArray,item))
+
+
+// function shortestWord(mySentence){
+// const myArray = mySentence.split(" ");
+// let myShortest = myArray[0];
+// for (i = 1; i < myArray.length - 1; i++) {
+//   let word = myArray[i];
+//   if (myShortest.length > word.length) {
+//     myShortest = word;
+//   }
+// }
+// return myShortest
+// }
+// const mySentence = "What are doing today?"; 
+// console.log(shortestWord(mySentence))
+
+
+function freqCounter(realArray){
+
+ let duplicatesArray=[]
+ let count = 0;
+ let newArray = [];
+   for (i = 0; i < realArray.length - 1; i++) {
+    let compare = realArray[i]
+     if (realArray[i+1] === compare) {
+       count++;
+         if (count>2){
+          newArray=duplicatesArray.concat(realArray[i+1])
+
+      }
+    }   
+  }
+  return newArray; 
+}
+
+const createArray = [1, 2, 3, 2, 4, 1]
+
+
+console.log(freqCounter(createArray))
+
