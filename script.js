@@ -153,25 +153,22 @@
 // let n=5
 // let fac = 1;
 // for(let i=1; i<=n; i++) {
-  
+
 //   fac=fac*i
 // }
 
 // console.log(fac)
 
-
 // function myFac(fac){
 //   let = totalFac=1
 //   for(let i=1; i<=fac; i++) {
-  
+
 //   totalFac = totalFac * i;
 // }
 //   return totalFac
 // }
 
 // console.log(myFac(6))
-
-
 
 // function isPalindrome(myWord){
 // myWord=myWord.toLocaleLowerCase()
@@ -187,18 +184,12 @@
 
 // console.log(isPalindrome("Hadgalagdah"))
 
-
-
-
 // function lastItem(myArray){
 // let newArray = myArray[myArray.length - 1];
 // return newArray
 // }
 // const realArray = ["banana", "apple", "kiwi", "dorj"];
 // console.log(lastItem(realArray));
-
-
-
 
 // function freqCounter(realArray,item){
 //   let count = 0;
@@ -215,7 +206,6 @@
 
 // console.log(freqCounter(realArray,item))
 
-
 // function shortestWord(mySentence){
 // const myArray = mySentence.split(" ");
 // let myShortest = myArray[0];
@@ -227,30 +217,62 @@
 // }
 // return myShortest
 // }
-// const mySentence = "What are doing today?"; 
+// const mySentence = "What are doing today?";
 // console.log(shortestWord(mySentence))
 
+// 10. Массив дахь давхардсан элементийн жагсаалт гаргах
+// findDuplicates(arr)
+// Жишээ:
+// [1,2,3,2,4,1] → [1,2]
 
-function freqCounter(realArray){
+// const myNumbers = [1, 2, 3, 2, 4, 1];
+// let myDuplicates = [];
+// let newDuplicates = [];
+// for (i = 0; i < myNumbers.length - 1; i++) {
+//   for (a = 1; a < myNumbers.length - 1; a++) {
+//     if (myNumbers[i] === myNumbers[a]) {
+//       newDuplicates = myDuplicates.push(myNumbers[i]);
+//     }
+//   }
+//   console.log(newDuplicates);
+// }
 
- let duplicatesArray=[]
- let count = 0;
- let newArray = [];
-   for (i = 0; i < realArray.length - 1; i++) {
-    let compare = realArray[i]
-     if (realArray[i+1] === compare) {
-       count++;
-         if (count>2){
-          newArray=duplicatesArray.concat(realArray[i+1])
+// const numbers = [1, 2, 1, 2, 3];
+// const duplicate = [1];
 
-      }
-    }   
+// for (let i = 0; i < numbers.length; i++) {
+//   const number = numbers[i];
+
+//   for (let j = i + 1; j < numbers.length; j++) {
+//     if (number === numbers[j] && !duplicate.includes(number)) {
+//       duplicate.push(number);
+//     }
+//   }
+// }
+
+// console.log(numbers, duplicate);
+
+function findNum() {
+  const enteredValue = prompt("too oruul");
+  const randomNumber = Math.floor(Math.random() * 10) + 1;
+  if (enteredValue === "" || enteredValue === null) return false;
+
+  if (Number(enteredValue) == randomNumber) {
+    console.log("Win", randomNumber);
+    return false;
   }
-  return newArray; 
+
+  if (Number(enteredValue) > randomNumber) {
+    console.log("Too high", randomNumber);
+    return true;
+  }
+  if (Number(enteredValue) < randomNumber) {
+    console.log("Too low", randomNumber);
+    return true;
+  }
 }
-
-const createArray = [1, 2, 3, 2, 4, 1]
-
-
-console.log(freqCounter(createArray))
-
+let result = true;
+for (let i = 1; result; i++) {
+  result = findNum();
+  console.log(i);
+}
