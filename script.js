@@ -206,36 +206,24 @@
 
 // console.log(freqCounter(realArray,item))
 
-// function shortestWord(mySentence){
-// const myArray = mySentence.split(" ");
-// let myShortest = myArray[0];
-// for (i = 1; i < myArray.length - 1; i++) {
-//   let word = myArray[i];
-//   if (myShortest.length > word.length) {
-//     myShortest = word;
+// function shortestWord(mySentence) {
+//   const myArray = mySentence.split(" ");
+//   let myShortest = myArray[0];
+//   for (i = 1; i < myArray.length - 1; i++) {
+//     let word = myArray[i];
+//     if (myShortest.length > word.length) {
+//       myShortest = word;
+//     }
 //   }
+//   return myShortest;
 // }
-// return myShortest
-// }
-// const mySentence = "What are doing today?";
-// console.log(shortestWord(mySentence))
+// const mySentence = "Are you doing well?";
+// console.log(shortestWord(mySentence));
 
 // 10. Массив дахь давхардсан элементийн жагсаалт гаргах
 // findDuplicates(arr)
 // Жишээ:
 // [1,2,3,2,4,1] → [1,2]
-
-// const myNumbers = [1, 2, 3, 2, 4, 1];
-// let myDuplicates = [];
-// let newDuplicates = [];
-// for (i = 0; i < myNumbers.length - 1; i++) {
-//   for (a = 1; a < myNumbers.length - 1; a++) {
-//     if (myNumbers[i] === myNumbers[a]) {
-//       newDuplicates = myDuplicates.push(myNumbers[i]);
-//     }
-//   }
-//   console.log(newDuplicates);
-// }
 
 // const numbers = [1, 2, 1, 2, 3];
 // const duplicate = [1];
@@ -249,30 +237,55 @@
 //     }
 //   }
 // }
-
 // console.log(numbers, duplicate);
+const maxNumber = 10;
+const randomNumber = Math.floor(Math.random() * maxNumber) + 1;
+let isCorret = false;
+let attemps = 0;
 
-function findNum() {
-  const enteredValue = prompt("too oruul");
-  const randomNumber = Math.floor(Math.random() * 10) + 1;
-  if (enteredValue === "" || enteredValue === null) return false;
+const inputValues = [];
 
-  if (Number(enteredValue) == randomNumber) {
-    console.log("Win", randomNumber);
-    return false;
-  }
+while (isCorret === false) {
+  const enteredValue = prompt("Enter the number between 0-5");
+  if (enteredValue === "" || enteredValue === null) {
+    // nothing
+  } else {
+    if (Number(enteredValue) == randomNumber) {
+      console.log(
+        "Win",
+        "Random Number is",
+        randomNumber,
+        "Your number is",
+        enteredValue
+      );
 
-  if (Number(enteredValue) > randomNumber) {
-    console.log("Too high", randomNumber);
-    return true;
+      isCorret = true;
+    }
+
+    if (Number(enteredValue) > randomNumber) {
+      console.log(
+        "Number is too high",
+        "Random Number is",
+        randomNumber,
+        "Your number is",
+        enteredValue
+      );
+    }
+    if (Number(enteredValue) < randomNumber) {
+      console.log(
+        "Number too low",
+        "Random Number is",
+        randomNumber,
+        "Your number is",
+        enteredValue
+      );
+    }
   }
-  if (Number(enteredValue) < randomNumber) {
-    console.log("Too low", randomNumber);
-    return true;
+  attemps++;
+  if (attemps === 5) {
+    isCorret = true;
+    alert("You lose");
   }
-}
-let result = true;
-for (let i = 1; result; i++) {
-  result = findNum();
-  console.log(i);
+  console.log(attemps);
+  [1, 2, 3];
 }
