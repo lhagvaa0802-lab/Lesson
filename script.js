@@ -238,54 +238,72 @@
 //   }
 // }
 // console.log(numbers, duplicate);
+
 const maxNumber = 10;
 const randomNumber = Math.floor(Math.random() * maxNumber) + 1;
 let isCorret = false;
 let attemps = 0;
-
+const input = document.getElementById(input);
 const inputValues = [];
+function submit() {
+  while (isCorret === false) {
+    const enteredValue = input.value;
+    if (enteredValue === "" || enteredValue === null) {
+      // nothing
+    } else {
+      if (Number(enteredValue) == randomNumber) {
+        console.log(
+          "Win",
+          "Random Number is",
+          randomNumber,
+          "Your number is",
+          enteredValue
+        );
 
-while (isCorret === false) {
-  const enteredValue = prompt("Enter the number between 0-5");
-  if (enteredValue === "" || enteredValue === null) {
-    // nothing
-  } else {
-    if (Number(enteredValue) == randomNumber) {
-      console.log(
-        "Win",
-        "Random Number is",
-        randomNumber,
-        "Your number is",
-        enteredValue
-      );
+        isCorret = true;
+      }
 
+      if (Number(enteredValue) > randomNumber) {
+        console.log(
+          "Number is too high",
+          "Random Number is",
+          randomNumber,
+          "Your number is",
+          enteredValue
+        );
+      }
+      if (Number(enteredValue) < randomNumber) {
+        console.log(
+          "Number too low",
+          "Random Number is",
+          randomNumber,
+          "Your number is",
+          enteredValue
+        );
+      }
+    }
+    attemps++;
+    if (attemps === 5) {
       isCorret = true;
+      alert("You lose");
     }
-
-    if (Number(enteredValue) > randomNumber) {
-      console.log(
-        "Number is too high",
-        "Random Number is",
-        randomNumber,
-        "Your number is",
-        enteredValue
-      );
-    }
-    if (Number(enteredValue) < randomNumber) {
-      console.log(
-        "Number too low",
-        "Random Number is",
-        randomNumber,
-        "Your number is",
-        enteredValue
-      );
-    }
+    console.log(attemps);
   }
-  attemps++;
-  if (attemps === 5) {
-    isCorret = true;
-    alert("You lose");
-  }
-  console.log(attemps);
-  [1, 2, 3];
 }
+
+submit();
+// const input = document.getElementById("input");
+// const text = document.getElementById("buttontext");
+// function submit() {
+//   const inputValue = input.value;
+//   if (inputValue == 0) {
+//     text.innerHTML = "";
+//   }
+
+//   if (input.value <= 10 && inputValue > 0) {
+//     text.innerHTML = "valid";
+//   } else {
+//     text.innerHTML = "invalid";
+//   }
+// }
+// submit();
