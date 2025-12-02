@@ -239,71 +239,283 @@
 // }
 // console.log(numbers, duplicate);
 
-const maxNumber = 10;
-const randomNumber = Math.floor(Math.random() * maxNumber) + 1;
-let isCorret = false;
-let attemps = 0;
-const input = document.getElementById(input);
-const inputValues = [];
-function submit() {
-  while (isCorret === false) {
-    const enteredValue = input.value;
-    if (enteredValue === "" || enteredValue === null) {
-      // nothing
-    } else {
-      if (Number(enteredValue) == randomNumber) {
-        console.log(
-          "Win",
-          "Random Number is",
-          randomNumber,
-          "Your number is",
-          enteredValue
-        );
-
-        isCorret = true;
-      }
-
-      if (Number(enteredValue) > randomNumber) {
-        console.log(
-          "Number is too high",
-          "Random Number is",
-          randomNumber,
-          "Your number is",
-          enteredValue
-        );
-      }
-      if (Number(enteredValue) < randomNumber) {
-        console.log(
-          "Number too low",
-          "Random Number is",
-          randomNumber,
-          "Your number is",
-          enteredValue
-        );
-      }
-    }
-    attemps++;
-    if (attemps === 5) {
-      isCorret = true;
-      alert("You lose");
-    }
-    console.log(attemps);
-  }
-}
-
-submit();
+// const maxNumber=10
 // const input = document.getElementById("input");
-// const text = document.getElementById("buttontext");
-// function submit() {
-//   const inputValue = input.value;
-//   if (inputValue == 0) {
-//     text.innerHTML = "";
-//   }
+// const mySubmit = document.getElementById("submit");
+// let attempt =0
 
-//   if (input.value <= 10 && inputValue > 0) {
-//     text.innerHTML = "valid";
-//   } else {
-//     text.innerHTML = "invalid";
+
+
+// function onSubmit(){
+//   let inputValue = Number(input.value);
+//   const randomNumber = Math.floor(Math.random() * maxNumber) + 1;
+//   console.log(inputValue,randomNumber)
+//   if (inputValue===randomNumber){
+//     document.getElementById('result').innerHTML = "You Guessed the number right"
+   
+//   }
+//    if (inputValue > randomNumber) {
+//      document.getElementById("result").innerHTML =
+//        "Number is too high";
+//    }
+//    if (inputValue < randomNumber) {
+//      document.getElementById("result").innerHTML =
+//        "Number is too low";
+//    }
+//    if(inputValue>10 && inputValue<0){
+//     document.getElementById("result").innerHTML = "Invalid number";
+//    }
+//    attempt++;
+//   document.getElementById("attempt").innerHTML="Your attempt="+attempt
+//   if (attempt>=5){
+//      document.getElementById("result").innerHTML = "You lose";
+//      attempt=0
+    
+//     }
+
+// }
+// mySubmit.onclick=onSubmit
+
+
+// forEach
+
+
+
+// const nums = [1, 2, 3, 4, 5];
+
+// nums.forEach(print)
+
+// function print(a){
+//   if (a%2===0)
+//     console.log(a,"Even")
+//   if (a % 2 === 1) console.log(a,"odd");
+  
+// }
+
+
+// const nums = [10, 15, 20, 25, 30];
+// let sum = 0;
+// nums.forEach(print);
+
+// function print(a) {
+//   if (a % 2 === 0){
+//     sum=sum+a
 //   }
 // }
-// submit();
+// console.log(sum);
+
+
+// const nums = [1, 2, 3, 4, 5];
+// let bool=[]
+// nums.forEach(print);
+
+// function print(a) {
+//   bool.push(a%2===0)
+// }
+// console.log(bool)
+
+
+// const nums = [3, 6, 9, 12];
+// let count=0
+// nums.forEach(print);
+
+// function print(a) {
+//   if (a%3===0){
+//     count++
+//   }
+
+// }
+// console.log(count);
+
+
+// const nums = ["hi", "hello", "hey", "hola"];
+// nums.forEach(print);
+
+// function print(a) {
+//   if (a.length>3) {
+//     console.log(a)
+//   }
+// }
+
+
+// const nums = [1, 2, 3, 4,1];
+
+// nums.forEach(print);
+
+// function print(a){
+//   let b=a*2
+//   if(b>5){
+//     console.log("big")
+//   }
+//   else{
+//     console.log("small")
+//   }
+
+// }
+
+
+// const nums = [100, 50, 200, 25];
+// const newMassive=[]
+// nums.forEach(print);
+
+// function print(a){
+//   if(a>50){
+//     newMassive.push(a)
+
+//   }
+// }
+// console.log(newMassive)
+
+// const arr = [2, 3, 5, 6, 8];
+
+
+
+// const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// nums.forEach(print)
+
+// function print(a){
+//   let b=a*3
+//   console.log(b)
+// }
+
+
+// const nums = [1, 2, 3, 4, 5];
+
+// function result(a){
+//   if (a%2===0){
+//     return (a*2)
+//   }else{
+//     return a
+//   }
+// }
+
+// const newArray=nums.map(result)
+// console.log(newArray)
+
+
+// const arr = ["bat", "dorj", "suren"];
+
+// function result(word){
+//   if(word.length>3){
+    
+//     return word.toUpperCase();
+//   } else {
+//     return word
+//   }
+
+// }
+// const newArray=arr.map(result)
+// console.log(newArray)
+
+
+// const nums = [1, 2, 3, 4, 5];
+
+
+// function result(a){
+// if (a%2===0){
+//   let b=a*a
+//   return b
+// }else{
+//   a=0
+//   return a
+// }
+// }
+
+// const newArray=nums.map(result)
+// console.log(newArray)
+
+
+// const nums = [10, 15, 5, 25];
+
+// function result(a){
+//  let b=a-10
+//  if(b<0){
+//   return a=0
+//  }else{
+//   return b
+//  }
+// }
+
+// const newArray=nums.map(result)
+// console.log(newArray)
+
+
+// const nums = [1, 2, 3, 4, 5];
+
+// function result(a){
+// if(a%2===0){
+//   return a=0
+// }else{
+//   return a=1
+// }
+// }
+// const newArray=nums.map(result)
+// console.log(newArray)
+
+// const arr = ["hi", "hello", "hey"];
+
+// function newMassive(word) {
+//   return word[0] + word[word.length - 1];
+// }
+
+// const newArray = arr.map(newMassive);
+
+// console.log(newArray);
+
+
+// const nums = [1, 2, 3, 4,6];
+
+// function result(a){
+// if (a%2===0){
+//   return 1
+// }else{
+//     return 0;
+// }
+// }
+//  const newArray=nums.map(result)
+// console.log(newArray)
+
+
+// const nums = [100, 200, 300,13];
+
+// function result(a){
+//   let b=a%3
+//   return b
+// }
+
+
+// const newArray=nums.map(result)
+// console.log(newArray)
+
+// const nums = [1, 2, 3, 4,5,6];
+
+// function result(a){
+//     let b=a*2
+//     if(b>10){
+//       return a=10
+//     }else {
+//       return b
+//     }
+
+
+// }
+
+// const newArray=nums.map(result)
+//  console.log(newArray)
+
+
+const nums = ["bat","dorj","suren","amaraa"];
+
+function result(a){
+  if (a.length>5){
+    return "long"
+  }else{
+    return "short"
+  }
+
+}
+
+
+const newArray=nums.map(result)
+ console.log(newArray)
