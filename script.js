@@ -244,15 +244,13 @@
 // const mySubmit = document.getElementById("submit");
 // let attempt =0
 
-
-
 // function onSubmit(){
 //   let inputValue = Number(input.value);
 //   const randomNumber = Math.floor(Math.random() * maxNumber) + 1;
 //   console.log(inputValue,randomNumber)
 //   if (inputValue===randomNumber){
 //     document.getElementById('result').innerHTML = "You Guessed the number right"
-   
+
 //   }
 //    if (inputValue > randomNumber) {
 //      document.getElementById("result").innerHTML =
@@ -270,16 +268,13 @@
 //   if (attempt>=5){
 //      document.getElementById("result").innerHTML = "You lose";
 //      attempt=0
-    
+
 //     }
 
 // }
 // mySubmit.onclick=onSubmit
 
-
 // forEach
-
-
 
 // const nums = [1, 2, 3, 4, 5];
 
@@ -289,9 +284,8 @@
 //   if (a%2===0)
 //     console.log(a,"Even")
 //   if (a % 2 === 1) console.log(a,"odd");
-  
-// }
 
+// }
 
 // const nums = [10, 15, 20, 25, 30];
 // let sum = 0;
@@ -304,7 +298,6 @@
 // }
 // console.log(sum);
 
-
 // const nums = [1, 2, 3, 4, 5];
 // let bool=[]
 // nums.forEach(print);
@@ -313,7 +306,6 @@
 //   bool.push(a%2===0)
 // }
 // console.log(bool)
-
 
 // const nums = [3, 6, 9, 12];
 // let count=0
@@ -327,7 +319,6 @@
 // }
 // console.log(count);
 
-
 // const nums = ["hi", "hello", "hey", "hola"];
 // nums.forEach(print);
 
@@ -336,7 +327,6 @@
 //     console.log(a)
 //   }
 // }
-
 
 // const nums = [1, 2, 3, 4,1];
 
@@ -353,7 +343,6 @@
 
 // }
 
-
 // const nums = [100, 50, 200, 25];
 // const newMassive=[]
 // nums.forEach(print);
@@ -368,8 +357,6 @@
 
 // const arr = [2, 3, 5, 6, 8];
 
-
-
 // const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // nums.forEach(print)
@@ -378,7 +365,6 @@
 //   let b=a*3
 //   console.log(b)
 // }
-
 
 // const nums = [1, 2, 3, 4, 5];
 
@@ -393,12 +379,11 @@
 // const newArray=nums.map(result)
 // console.log(newArray)
 
-
 // const arr = ["bat", "dorj", "suren"];
 
 // function result(word){
 //   if(word.length>3){
-    
+
 //     return word.toUpperCase();
 //   } else {
 //     return word
@@ -408,9 +393,7 @@
 // const newArray=arr.map(result)
 // console.log(newArray)
 
-
 // const nums = [1, 2, 3, 4, 5];
-
 
 // function result(a){
 // if (a%2===0){
@@ -425,7 +408,6 @@
 // const newArray=nums.map(result)
 // console.log(newArray)
 
-
 // const nums = [10, 15, 5, 25];
 
 // function result(a){
@@ -439,7 +421,6 @@
 
 // const newArray=nums.map(result)
 // console.log(newArray)
-
 
 // const nums = [1, 2, 3, 4, 5];
 
@@ -463,7 +444,6 @@
 
 // console.log(newArray);
 
-
 // const nums = [1, 2, 3, 4,6];
 
 // function result(a){
@@ -476,14 +456,12 @@
 //  const newArray=nums.map(result)
 // console.log(newArray)
 
-
 // const nums = [100, 200, 300,13];
 
 // function result(a){
 //   let b=a%3
 //   return b
 // }
-
 
 // const newArray=nums.map(result)
 // console.log(newArray)
@@ -498,24 +476,155 @@
 //       return b
 //     }
 
+// }
+
+// const newArray=nums.map(result)
+//  console.log(newArray)
+
+// const nums = ["bat","dorj","suren","amaraa"];
+
+// function result(a){
+//   if (a.length>5){
+//     return "long"
+//   }else{
+//     return "short"
+//   }
 
 // }
 
 // const newArray=nums.map(result)
 //  console.log(newArray)
 
+// const nums = [1, 2, 3, 4, 5, 6];
 
-const nums = ["bat","dorj","suren","amaraa"];
+// const newArray = nums.filter((num) => num % 2 === 0);
 
-function result(a){
-  if (a.length>5){
-    return "long"
-  }else{
-    return "short"
-  }
+// console.log(newArray);
 
-}
+// const nums = [1, 2, 3, 4, 5, 6];
 
+// const newArray = nums.filter((num) => num % 2 !== 0);
 
-const newArray=nums.map(result)
- console.log(newArray)
+// console.log(newArray);
+
+// const nums = [5, 12, 8, 30];
+
+// const newArray = nums.filter((num) => num > 10);
+
+// console.log(newArray);
+
+// 4. 5 үсгээс урт үгсийг шүүх ["hi","hello","winter","cat"] → ["hello","winter"]
+
+// const arr = ["hi", "hello", "winter", "cat"];
+
+// const newArray = arr.filter((word) => word.length >= 5);
+
+// console.log(newArray);
+
+// const arr = ["bat", "dorj", "amar", "suren"];
+
+// const newArray = arr.filter((word) => word.includes("a"));
+
+// console.log(newArray);
+
+// 6. 0-ээс их тоонуудыг шүүх[-3,0,5,-1,10] → [5,10]
+
+// const arr = [-3, 0, 5, -1, 10];
+
+// const newArray = arr.filter((num) => num > 0);
+
+// console.log(newArray);
+
+// 7. Тоонууд дундаас зөвхөн 3-аар хуваагдахыг шүүх[3,4,9,10,12] → [3,9,12]
+
+// const arr = [3, 4, 9, 10, 12];
+// const newArray = arr.filter((num) => num % 3 === 0);
+// console.log(newArray);
+
+// 8. Boolean массив → зөвхөн true байхыг шүүх[true,false,true,false] → [true,true]
+
+// const arr = [true, false, true, false];
+// const newArray = arr.filter((bool) => bool === true);
+// console.log(newArray);
+
+// 9. Эхний үсэг нь “s” үсгээр эхэлдэг үгсийг шүүх["snow","cat","sun","dark"] → ["snow","sun"]
+
+// const arr = ["snow", "cat", "sun", "dark"];
+
+// const newArray = arr.filter((word) => word.charAt(0) === "s");
+// console.log(newArray);
+
+// 10. Жагсаалтаас давхардсан үгсийг авах (тэнцүү эсэхээр шалгах)["a","b","a","c","b"] → "a", "b" давхардсан учир → ["a","b"]
+
+// const arr = ["a", "b", "a", "c", "b"];
+
+// const temp = [];
+// const dup = arr.filter((char) => {
+//   if (!temp.includes(char)) {
+//     temp.push(char);
+//     return false;
+//   } else {
+//     return true;
+//   }
+// });
+
+// console.log(dup);
+
+// 1. Тоонуудын нийлбэрийг ол[1,2,3,4,5] → 15
+
+// const arr = [1, 2, 3, 4, 5];
+
+// const sum = arr.reduce((acc, val) => {
+//   return acc + val;
+// }, 0);
+// console.log(sum);
+
+// 2. Тоонуудын үржвэрийг ол[2,3,4] → 24
+
+// const arr = [2, 3, 4];
+// const sum = arr.reduce((acc, val) => {
+//   return acc * val;
+// }, 1);
+// console.log(sum);
+
+// 3. Массив дахь хамгийн их тоог ол[10,30,5,22] → 30
+
+// const arr = [10, 30, 5, 22];
+
+// const sum = arr.reduce((acc, val) => {
+//   if (acc > val) {
+//     return acc;
+//   } else {
+//     return val;
+//   }
+// });
+// console.log(sum);
+
+// 4. Массив дахь хамгийн бага тоог ол[10,3,20,7] → 3
+
+// const arr = [10, 3, 20, 7];
+
+// const sum = arr.reduce((acc, val) => {
+//   if (acc < val) {
+//     return acc;
+//   } else {
+//     return val;
+//   }
+// });
+// console.log(sum);
+
+// 5. Текстүүдийг нэг мөр болгон нийлүүлэх["hi","hello","hey"] → "hihellohey"
+
+// const arr = ["hi", "hello", "hey"];
+// const sum = arr.reduce((acc, val) => {
+//   return acc + val;
+// }, []);
+// console.log(sum);
+
+// 6. String массивын нийт үсгийн тоог ол["hi","hello","hey"] → 2 + 5 + 3 = 10
+
+const arr = ["hi", "hello", "hey"];
+const sum = arr.reduce((acc, val) => {
+  return acc + val.length;
+}, 0);
+console.log(sum);
