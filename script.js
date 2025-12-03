@@ -623,8 +623,188 @@
 
 // 6. String массивын нийт үсгийн тоог ол["hi","hello","hey"] → 2 + 5 + 3 = 10
 
-const arr = ["hi", "hello", "hey"];
-const sum = arr.reduce((acc, val) => {
-  return acc + val.length;
-}, 0);
-console.log(sum);
+// const arr = ["hi", "hello", "hey"];
+// const sum = arr.reduce((acc, val) => {
+//   return acc + val.length;
+// }, 0);
+// console.log(sum);
+
+
+// const arr = [1, 2, 3, 4, 5, 6];
+// const newArray=arr.filter(n=> n%2===0)
+// const sum=newArray.reduce((acc , val ) =>acc+val*val,0)
+// console.log(sum);
+
+
+// const arr = [2, 6, 4, 10];
+// const newArray=arr.filter(n=> n>5)
+// const sum=newArray.reduce((acc , val )=> acc+val*3,0)
+// console.log(sum);
+
+
+// 3. 3-аар хуваагдах тоонуудын квадратын нийлбэр
+// [3,4,6,7,9] → 3²+6²+9² = 126
+
+// const arr = [3, 4, 6, 7, 9];
+// const newArray = arr.filter(n => n %3===0);
+// const sum = newArray.reduce((acc, val) => acc + val * val, 0);
+// console.log(sum);
+
+// 4. 10-аас бага тоонуудын кубын нийлбэр
+// [2,5,12,7] → 2³+5³+7³ = 470
+
+
+// const arr = [2,5,12,7];
+// const newArray = arr.filter(n => n<10);
+// const sum = newArray.reduce((acc, val) => acc + val * val*val, 0);
+// console.log(sum);
+
+// 5. 0-с их тоонуудыг 2 дахин үржүүлж нийлбэр
+// [-2,3,0,5,-1] → (32 + 52) = 16
+
+
+
+// const arr = [-2,3,0,5,-1];
+// const newArray = arr.filter(n => n>0);
+// const sum = newArray.reduce((acc, val) => acc + val * 2, 0);
+// console.log(sum);
+
+
+// 6. 2-аар хуваагдах тоонуудын дундаж
+// [2,5,8,10] → (2+8+10)/3 = 6.666…
+
+// const arr = [2, 5, 8, 10];
+// const newArray = arr.filter(n => n%2===0);
+// const sum = newArray.reduce((acc, val) => acc + val, 0);
+// console.log(sum/newArray.length);
+
+// 7. 3-аар хуваагдах тоонуудын дундаж
+// [3,4,6,7,9] → (3+6+9)/3 = 6
+
+// const arr =[3,4,6,7,9];
+// const newArray = arr.filter(n => n%3===0);
+// const sum = newArray.reduce((acc, val) => acc + val, 0);
+// console.log(sum/newArray.length);
+
+
+// 8. 5-аас их тоонуудыг модуль 2 үр дүнгээр шүүх, нийлбэр олох
+// [2,6,4,10,7] → 6+4+10 = 20
+
+
+//  const arr =[2,6,4,10,7];
+//  const newArray = arr.filter(n => n>5 &&n%2===0);
+//  const sum = newArray.reduce((acc, val) => acc + val, 0);
+//  console.log(sum);
+
+
+// 9. 3-аас бага тоонуудын үржвэр
+// [1,2,3,4,5] → 1*2 = 2
+
+//   const arr =[2,6,4,10,7];
+//   const newArray = arr.filter(n => n<3);
+//   const sum = newArray.reduce((acc, val) => acc * val, 1);
+//   console.log(sum);
+
+
+//   10. 5-аас бага тоонуудын квадратын нийлбэр
+// [1,2,3,6,7] → 1²+2²+3² = 14
+
+
+//  const arr =[1,2,3,6,7];
+//   const newArray = arr.filter(n => n<5);
+//   const sum = newArray.reduce((acc, val) => acc + val*val, 0);
+//   console.log(sum);
+
+
+//   11. 10-аас их тоонуудын квадратын нийлбэр
+// [5,12,8,20,3] → 12² + 20² = 544
+
+//  const arr = [5, 12, 8, 20, 3];
+//   const newArray = arr.filter(n => n>10);
+//   const sum = newArray.reduce((acc, val) => acc + val*val, 0);
+//   console.log(sum)
+
+
+//   12. Тэгш тоонуудын кубын нийлбэр
+// [1,2,3,4,5,6] → 2³+4³+6³ = 288
+
+// const arr = [1, 2, 3, 4, 5, 6]; 
+//   const newArray = arr.filter(n => n%2===0);
+//   const sum = newArray.reduce((acc, val) => acc + val*val*val, 0);
+//   console.log(sum)
+
+//   13. 3-аар хуваагдах тоонуудын кубын нийлбэр
+// [3,4,6,7,9] → 3³+6³+9³ = 972
+
+
+
+// const arr = [3,4,6,7,9] ;
+//   const newArray = arr.filter(n => n%3===0);
+//   const sum = newArray.reduce((acc, val) => acc + val*val*val, 0);
+//   console.log(sum)
+
+//   14. 0-с их тоонуудын квадратын нийлбэр
+// [-5,0,4,7,-1] → 4²+7² = 65
+
+// const arr = [-5, 0, 4, 7, -1]; 
+//   const newArray = arr.filter(n => n>0);
+//   const sum = newArray.reduce((acc, val) => acc + val*val, 0);
+//   console.log(sum)
+
+
+//   15. 10-аас их тоонуудыг 2 дахин үржүүлж нийлбэр
+// [8,12,15,5] → 122 + 152 = 54
+
+// const arr = [8, 12, 15, 5]; 
+//   const newArray = arr.filter(n => n>10);
+//   const sum = newArray.reduce((acc, val) => acc + val*2, 0);
+//   console.log(sum)
+
+//   16. 5-аас их тоонуудын модуль 3 үр дүнг нийлүүлэх
+// [2,6,4,10,7] → 6%3 + 10%3 = 0+1 = 1
+
+
+// const arr = [2,6,4,10,7]; 
+//   const newArray = arr.filter( => n>5);
+//   const sum = newArray.reduce((acc, val) => acc + val%3, 0);
+//   console.log(sum)
+
+//   17. 5-аас бага тоонуудын модуль 2 үр дүнг нийлүүлэх
+// [1,2,3,6,7] → 1%2 + 2%2 + 3%2 = 1+0+1 = 2
+
+// const arr = [1, 2, 3, 6, 7]; 
+//   const newArray = arr.filter(n => n<5);
+//   const sum = newArray.reduce((acc, val) => acc + val%2, 0);
+//   console.log(sum)
+
+
+//   18. 3-аар хуваагдах тоонуудын квадратын нийлбэрийг мод 10
+// [3,4,6,7,9] → (3²+6²+9²)%10 = 126%10 = 6
+
+
+// const arr = [3, 4, 6, 7, 9]; 
+//   const newArray = arr.filter(n => n%3===0);
+//   const sum = newArray.reduce((acc, val) => acc + val*val, 0);
+//   const mod=sum%10
+//   console.log(mod)
+
+//   19. 10-аас их тоонуудын квадратын нийлбэрийг мод 7
+// [5,12,8,20,3] → (12² + 20²)%7 = 544%7 = 5
+
+// const arr = [5, 12, 8, 20, 3]; 
+//   const newArray = arr.filter(n => n>10);
+//   const sum = newArray.reduce((acc, val) => acc + val*val, 0);
+//   const mod=sum%7
+//   console.log(mod)
+
+
+//   20. String массив: 5 үсгээс урт үгсийг filter → map → reduce ашиглан нийт урт
+// ["hi","hello","hey","world","javascript"] → hello+world+javascript = 5+5+10=20
+
+
+const arr = ["hi", "hello", "hey", "world", "javascript"]; 
+  const newArray = arr.filter(word=>word.length>=5);
+  const sum = newArray.reduce((acc, word) => acc + word.length, 0);
+
+  console.log(sum)
+  
